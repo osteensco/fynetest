@@ -6,7 +6,7 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-func home(w fyne.Window, c fyne.Canvas) {
+func root(w fyne.Window, c fyne.Canvas) {
 
 	modalContent := container.NewVBox(
 		popupLabel,
