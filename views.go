@@ -5,14 +5,14 @@ import (
 	"fyne.io/fyne/v2/canvas"
 	"fyne.io/fyne/v2/container"
 	"fyne.io/fyne/v2/widget"
-	"image/color"
+	// "image/color"
 )
 
 func root(w fyne.Window, c fyne.Canvas, view ScreenViews) {
 
 	w.SetContent(
 		container.NewVBox(
-			label,
+			rootLabel,
 			widget.NewButton("Colors", func() {
 				w.SetContent(view.colors)
 			}),
@@ -28,8 +28,9 @@ func root(w fyne.Window, c fyne.Canvas, view ScreenViews) {
 func colorsView(w fyne.Window, c fyne.Canvas) fyne.CanvasObject {
 	var screen fyne.CanvasObject
 
-	colorBox := canvas.NewRectangle(color.Black)
-	label := canvas.NewText("Black", color.White)
+	currColor := colors[2]
+	colorBox := canvas.NewRectangle(currColor.color)
+	label := currColor.label
 	screen = container.NewStack(
 		colorBox,
 		label,
