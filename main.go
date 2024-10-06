@@ -15,9 +15,9 @@ func main() {
 	w.Resize(fyne.NewSize(500, 500))
 
 	screenViews := constants.ScreenViews{
-		views.ColorsView(w, c),
-		views.NumbersView(w, c),
-		views.LettersView(w, c),
+		Colors:  views.ColorsView(w, c),
+		Numbers: views.NumbersView(w, c),
+		Letters: views.LettersView(w, c),
 	}
 
 	views.Root(w, c, screenViews)
