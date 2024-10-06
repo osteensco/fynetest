@@ -1,4 +1,4 @@
-package main
+package components
 
 import (
 	"fyne.io/fyne/v2"
@@ -21,12 +21,4 @@ func makePopup(c fyne.Canvas, content *fyne.Container) *widget.PopUp {
 	)
 
 	return p
-}
-
-func closeButton() *widget.Button {
-
-	return widget.NewButton(
-		"X",
-		nil,
-	)
 }

@@ -1,4 +1,4 @@
-package main
+package constants
 
 import (
 	"image/color"
@@ -8,20 +8,20 @@ import (
 	"fyne.io/fyne/v2/widget"
 )
 
-var rootLabel = widget.NewLabel("It's time to learn!")
+var RootLabel = widget.NewLabel("It's time to learn!")
 
 type ScreenViews struct {
-	colors  fyne.CanvasObject
-	numbers fyne.CanvasObject
-	letters fyne.CanvasObject
+	Colors  fyne.CanvasObject
+	Numbers fyne.CanvasObject
+	Letters fyne.CanvasObject
 }
 
 type ColorObj struct {
-	color color.Color
-	label *canvas.Text
+	Color color.Color
+	Label *canvas.Text
 }
 
-var colors = []ColorObj{
+var Colors = []ColorObj{
 	{
 		color.Black,
 		canvas.NewText("Black", color.White),

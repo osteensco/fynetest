@@ -1,6 +1,9 @@
 package main
 
 import (
+	"fynetest/constants"
+	"fynetest/views"
+
 	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
 )
@@ -11,13 +14,13 @@ func main() {
 	c := w.Canvas()
 	w.Resize(fyne.NewSize(500, 500))
 
-	views := ScreenViews{
-		colorsView(w, c),
-		numbersView(w, c),
-		lettersView(w, c),
+	screenViews := constants.ScreenViews{
+		views.ColorsView(w, c),
+		views.NumbersView(w, c),
+		views.LettersView(w, c),
 	}
 
-	root(w, c, views)
+	views.Root(w, c, screenViews)
 
 	w.ShowAndRun()
 }
